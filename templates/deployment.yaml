@@ -29,13 +29,13 @@ spec:
         - name: nginx-index-file
           configMap:
             name: {{ .Release.Name }}-index-html-configmap
-    strategy:
-      canary:
-        steps:
-        - setWeight: 20
-        - pause: {duration: 10}
-        - setWeight: 50
-        - pause: {duration: 10}
-        - setWeight: 70
-        - pause: {duration: 10}
-        - setWeight: 100
+  strategy:
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: {duration: 10}
+      - setWeight: 50
+      - pause: {duration: 10}
+      - setWeight: 70
+      - pause: {duration: 10}
+      - setWeight: 100
