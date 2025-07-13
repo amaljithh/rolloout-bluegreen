@@ -5,11 +5,5 @@ image:
   tag: "1.13.0"
   pullPolicy: IfNotPresent
 
-service:
-  name: nginx-service
-  type: ClusterIP
-  port: 80
-  targetPort: 80
-
 env:
   name: dev

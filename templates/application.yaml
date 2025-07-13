@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp
-  namespace: argocd
+  namespace: bluegreen
 spec:
   project: default
   source:
@@ -11,4 +11,4 @@ spec:
     path: .
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: bluegreen

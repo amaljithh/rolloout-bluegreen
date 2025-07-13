@@ -30,7 +30,7 @@ spec:
           configMap:
             name: {{ .Release.Name }}-index-html-configmap
   strategy:
-    bluegreen:
+    blueGreen:
       activeService: rollout-ngnix-active
       previewService: rollout-ngnix-preview
       autoPromotionEnabled: false
